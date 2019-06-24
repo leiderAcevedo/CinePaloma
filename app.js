@@ -7,7 +7,5 @@ function registrar(){
         var errorCode = error.code;
         var errorMessage = error.message;
         // ...
-      });email-password.html
-      
-      
+      });
 }
