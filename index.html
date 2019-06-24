@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>prueba de firebase</title>
+
+
+</head>
+<body>  
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.2/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAe-OJCzpvkPWgiEAD5POdkWXA0o93PjJ8",
+    authDomain: "prueba-3c5d1.firebaseapp.com",
+    databaseURL: "https://prueba-3c5d1.firebaseio.com",
+    projectId: "prueba-3c5d1",
+    storageBucket: "prueba-3c5d1.appspot.com",
+    messagingSenderId: "149545570632",
+    appId: "1:149545570632:web:a7c5538f0d151427"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+    <script>
+    function registrar(){
+    var correo = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    firebase.auth().createUserWithEmailAndPassword(correo, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+      });email-password.html
+      
+      
+}
+    </script>
+    <input id="email" type="email">
+    <input id="password" type="password">
+    <button onclick="registrar();">enviar</button>
+    
+</body>
+</html>
