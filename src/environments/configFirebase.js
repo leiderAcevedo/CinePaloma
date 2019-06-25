@@ -8,4 +8,7 @@ app.firebaseConfig = {
     appId: "1:149545570632:web:a7c5538f0d151427"
 };
 
-firebase.initializeApp(firebaseConfig);
+window.onload = function () {
+    firebase.initializeApp(app.firebaseConfig);
+    app.start();
+}
