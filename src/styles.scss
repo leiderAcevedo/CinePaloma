@@ -1,0 +1,21 @@
+@import 'environments/colors.scss';
+@import 'environments/mixins/redme.scss';
+@import 'environments/mixins/border-radius.scss';
+
+body {
+    background: black;
+    color: white;
+    div {
+        &.redme {
+            @include redme;
+        }
+    }
+    
+    p {
+        &.redme {
+            @include redme;
+            @include border-radius(50px);
+            padding: 20px;
+        }
+    }
+}
